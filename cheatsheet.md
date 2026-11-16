@@ -43,3 +43,34 @@ for num,name in 数据字典：
         high_name=name
 print()
 ```
+
+
+
+ pairs = {')': '(', ']': '[', '}': '{'}
+
+if ch in pairs:                                   # 遇到右括号
+    if len(stack) == 0 or stack[-1] != pairs[ch]: # 栈是空的，或者栈顶不配对
+        return False
+    stack.pop()                                   # 配对成功，拿走栈顶的左括号
+
+
+    def ping(self, t):
+    self.q.append(t)                  # 新请求排到队尾
+    while self.q[0] < t - 3000:       # 队头太老（早于 t-3000）
+        self.q.popleft()              # 把它移出队列
+    return len(self.q)                # 剩下的就是最近 3000 毫秒内的请求
+
+    def containsDuplicate(self, nums):
+    seen = set()
+    for num in nums:
+        if num in seen:      # 之前见过这个数
+            return True      # 有重复
+        seen.add(num)        # 没见过，就记下来
+    return False             # 全部查完都没有重复
+
+特征值 = 数据在这个方向上的方差。
+特征值越大，数据在这个方向上分布得越开，包含的信息越多，这个主成分就越重要。
+占比 = vals / vals.sum()。
+
+全部同号 → 表达“总量”，比如身材数据里的“体型大小”。
+正负混合 → 表达“对比”，比如成绩里的“偏理 vs 偏文”、便利店里的“冷 vs 热”。
